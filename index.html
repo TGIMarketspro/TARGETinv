@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGI Markets Pro™ - Forex Signals</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  /* --- Global --- */
+  * { box-sizing: border-box; margin:0; padding:0; font-family: 'Roboto', sans-serif; }
+  body { background: linear-gradient(135deg,#f0f4f8,#cfe2f3); color:#111; overflow-x:hidden; }
+  a { text-decoration:none; color:inherit; }
+  img { max-width:100%; display:inline-block; }
+
+  /* --- Header --- */
+  header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background: #1a1a1a; color:#fff; position:sticky; top:0; z-index:999; }
+  .logo { font-size:26px; font-weight:900; letter-spacing:1px; text-transform:uppercase; color:#00bfff; }
+  .menu-btn { font-size:28px; cursor:pointer; display:flex; flex-direction:column; justify-content:space-between; height:22px; }
+  .menu-btn div { width:30px; height:4px; background:#fff; border-radius:2px; }
+  nav { position:absolute; top:70px; right:40px; background:#fff; color:#111; padding:20px; border-radius:8px; display:none; flex-direction:column; box-shadow:0 0 10px rgba(0,0,0,0.2); }
+  nav a { padding:10px 0; font-weight:700; }
+
+  /* --- Hero --- */
+  .hero { text-align:center; padding:100px 20px 60px; }
+  .hero h1 { font-size:3rem; font-weight:900; color:#00bfff; margin-bottom:20px; }
+  .hero .trophy { font-size:50px; display:block; margin-bottom:10px; color:#ffbf00; }
+
+  /* --- Review Section --- */
+  .review-single { text-align:center; margin:40px 20px; }
+  .review-single img { width:50px; border-radius:50%; margin-bottom:10px; }
+  .review-single h3 { font-weight:700; margin-bottom:5px; }
+  .review-single p { display:flex; justify-content:center; align-items:center; gap:10px; color:#333; }
+
+  /* --- Stats --- */
+  .stats { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:40px 0; }
+  .stat-box { flex:1 1 150px; background:#00bfff; color:#fff; text-align:center; padding:20px; border-radius:8px; font-weight:700; }
+  .online { display:flex; justify-content:center; align-items:center; gap:10px; color:green; margin-bottom:40px; font-weight:700; }
+
+  /* --- Section Titles --- */
+  section { padding:80px 20px; text-align:center; }
+  section h2 { font-size:2.5rem; font-weight:900; margin-bottom:20px; color:#1a1a1a; }
+  section p { max-width:800px; margin:0 auto 20px; font-size:1rem; line-height:1.6; color:#333; }
+  .cta-btn { background:#00bfff; color:#fff; padding:15px 25px; border-radius:6px; font-weight:700; display:inline-flex; align-items:center; gap:10px; cursor:pointer; margin-top:20px; transition:0.3s; }
+  .cta-btn:hover { background:#0080ff; }
+
+  /* --- Reviews Scroll --- */
+  .reviews-scroll { overflow:hidden; position:relative; width:100%; margin:40px 0; }
+  .reviews-line { display:flex; gap:20px; animation:scroll-left 25s linear infinite; }
+  .reviews-line:nth-child(2) { animation:scroll-right 25s linear infinite; }
+  .review-card { flex:0 0 200px; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:left; font-size:0.9rem; }
+  .review-card h4 { font-weight:700; margin-bottom:5px; }
+  .review-card .city { color:#555; font-size:0.8rem; margin-bottom:5px; }
+  .review-card .amounts { display:flex; justify-content:space-between; font-weight:700; margin-bottom:5px; }
+  .review-card .months { font-size:0.75rem; color:#888; }
+
+  @keyframes scroll-left { 0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
+  @keyframes scroll-right { 0%{transform:translateX(-50%);}100%{transform:translateX(0);} }
+
+  /* --- Telegram Cards --- */
+  .telegram-card { display:flex; flex-direction:column; align-items:center; background:#e0f7ff; padding:20px; border-radius:12px; margin:40px 20px; }
+  .telegram-card img { width:50px; margin-bottom:10px; }
+  .telegram-card .channel-name { font-weight:900; font-size:1.3rem; color:#00bfff; }
+  .telegram-card .tagline { font-weight:500; margin-top:5px; color:#333; }
+
+  /* --- Steps Cards --- */
+  .steps { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:40px 0; }
+  .step-card { flex:1 1 250px; background:#00bfff; color:#fff; padding:20px; border-radius:12px; text-align:left; }
+  .step-card h4 { margin-bottom:10px; }
+
+  /* --- Constant Bottom Button --- */
+  .fixed-btn { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#00bfff; color:#fff; padding:15px 25px; border-radius:8px; font-weight:700; display:flex; align-items:center; gap:10px; z-index:999; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">TGI Markets Pro™</div>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav id="menu">
+    <a href="#reviews">Reviews</a>
+    <a href="#forex">What is Forex</a>
+    <a href="#benefits">Results & Benefit</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <span class="trophy">🏆</span>
+  <h1>#1 Forex Signals!</h1>
+</section>
+
+<!-- Single Review -->
+<section class="review-single">
+  <img src="https://via.placeholder.com/50" alt="aarav sharma">
+  <h3>Aarav Sharma</h3>
+  <p>🏆 My account saw significant growth recently</p>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-box">Active Users<br>25,000+</div>
+  <div class="stat-box">Average Profit<br>89.9%+</div>
+  <div class="stat-box">Weekly Signals<br>50+</div>
+  <div class="stat-box">TGI PROs™ Clients<br>2500+</div>
+</div>
+<div class="online">🟢 2180+ traders online</div>
+
+<!-- Forex Explained -->
+<section id="forex">
+  <h2>What is Forex trading?</h2>
+  <p>Forex, or foreign exchange trading, is the global market for currency trading. With a daily volume over $5 trillion, it is the largest and most liquid market worldwide, operating 24 hours a day, five days a week. To succeed in Forex, one must understand the market, remain disciplined, and have a well-planned investment strategy.</p>
+  <!-- JOIN THOUSANDS TODAY Button -->
+  <a href="https://t.me/TGImarketpros" target="_blank" class="cta-btn">
+    JOIN THOUSANDS TODAY
+  </a>
+</section>
+
+<!-- Benefits -->
+<section id="benefits">
+  <h2>The benefits of trading in the forex market with TGI Markets Pro™?</h2>
+  <p>TGI Markets Pro™ simplifies Forex trading. Our platform lets you trade smartly in minutes with real-time results. Enjoy 24/7 customer support and stay connected to the market. Access world-class trading educators and our Forex Signals service to become a successful trader. With over eleven years of experience in field, we are here to help you succeed.</p>
+</section>
+
+<!-- Our Client Results -->
+<section id="reviews">
+  <h2>Our Client's Results</h2>
+  <p>Over 25,000+ took action. Now it's your turn.</p>
+
+  <div class="reviews-scroll">
+    <div class="reviews-line">
+      <div class="review-card"><h4>Priya Sharma</h4><div class="city">Mumbai</div><div class="amounts"><span>Start: €3.000</span><span>Now: €110.500</span></div><div class="months">6 months</div></div>
+      <div class="review-card"><h4>Ayansh Bhargav</h4><div class="city">Mumbai</div><div class="amounts"><span>Start: €1.200</span><span>Now: €6.770</span></div><div class="months">3 months</div></div>
+      <div class="review-card"><h4>Saloni Menon</h4><div class="city">Hyderabad</div><div class="amounts"><span>Start: €6.000</span><span>Now: €180.300</span></div><div class="months">8 months</div></div>
+      <div class="review-card"><h4>Riva Malhotra</h4><div class="city">Pune</div><div class="amounts"><span>Start: €500</span><span>Now: €13.000</span></div><div class="months">10 months</div></div>
+      <div class="review-card"><h4>Gaurav Arora</h4><div class="city">Jaipur</div><div class="amounts"><span>Start: €2.000</span><span>Now: €35.900</span></div><div class="months">12 months</div></div>
+    </div>
+    <div class="reviews-line">
+      <div class="review-card"><h4>Yogesh Choudhary</h4><div class="city">Kanpur</div><div class="amounts"><span>Start: €900</span><span>Now: €5.200</span></div><div class="months">12 months</div></div>
+      <div class="review-card"><h4>Navin Sodhi</h4><div class="city">Chandigarh</div><div class="amounts"><span>Start: €450</span><span>Now: €20.010</span></div><div class="months">19 months</div></div>
+      <div class="review-card"><h4>Rahul Mehta</h4><div class="city">Kolkata</div><div class="amounts"><span>Start: €100</span><span>Now: €2.100</span></div><div class="months">14 months</div></div>
+      <div class="review-card"><h4>Laxmi Reddy</h4><div class="city">Chennai</div><div class="amounts"><span>Start: €1.000</span><span>Now: €9.850</span></div><div class="months">20 months</div></div>
+      <div class="review-card"><h4>Surendar Meghwal</h4><div class="city">Gurugram</div><div class="amounts"><span>Start: €500</span><span>Now: €3.500</span></div><div class="months">18 months</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works & Telegram -->
+<section>
+  <h2>How it works ℹ️</h2>
+  <p>TGI Markets Pro™ helps you with the results you want to achieve. Follow our plan to get the life you deserve!</p>
+  <div class="telegram-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    <div class="channel-name">TGI Markets Pro™</div>
+    <div class="tagline">|Free-Forex signals|</div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="steps">
+  <div class="step-card">
+    <h4>Step 1</h4>
+    Download the Telegram app to join our free trading community for daily trading opportunities and valuable insights.
+  </div>
+  <div class="step-card">
+    <h4>Step 2</h4>
+    Contact our support team on telegram @TGIMoon for a VIP membership!
+  </div>
+  <div class="step-card">
+    <h4>Step 3</h4>
+    Setup and fund your trading account and start trading the TGI Markets Pro™ premium Signals.
+  </div>
+</section>
+
+<!-- Motivational Card + Join Button -->
+<section>
+  <h2>There is only one person who can make it happen, and that is you!</h2>
+  <a href="https://t.me/targetinv_bot" target="_blank" class="cta-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24" alt="Telegram">
+    Join for free now
+  </a>
+</section>
+
+<!-- Fixed Bottom Button -->
+<a href="https://t.me/tgimarketpros" target="_blank" class="fixed-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24" alt="Telegram">
+  Join for free now
+</a>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById('menu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+
+</body>
+</html>
