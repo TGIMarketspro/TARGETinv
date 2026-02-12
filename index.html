@@ -70,6 +70,15 @@
   /* --- Constant Bottom Button --- */
   .fixed-btn { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#00bfff; color:#fff; padding:15px 25px; border-radius:8px; font-weight:700; display:flex; align-items:center; gap:10px; z-index:999; cursor:pointer; }
 </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5GSDC2MKMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5GSDC2MKMZ');
+</script>
 </head>
 <body>
 
@@ -116,7 +125,11 @@
   <h2>What is Forex trading?</h2>
   <p>Forex, or foreign exchange trading, is the global market for currency trading. With a daily volume over $5 trillion, it is the largest and most liquid market worldwide, operating 24 hours a day, five days a week. To succeed in Forex, one must understand the market, remain disciplined, and have a well-planned investment strategy.</p>
   <!-- JOIN THOUSANDS TODAY Button -->
-  <a href="https://t.me/TGImarketpros" target="_blank" class="cta-btn">
+  <a href="https://t.me/TGImarketpros" target="_blank" class="cta-btn"
+   onclick="gtag('event','telegram_click',{
+       event_category:'CTA',
+       event_label:'Join Thousands Today'
+   });">
     JOIN THOUSANDS TODAY
   </a>
 </section>
@@ -180,14 +193,22 @@
 <!-- Motivational Card + Join Button -->
 <section>
   <h2>There is only one person who can make it happen, and that is you!</h2>
-  <a href="https://t.me/targetinv_bot" target="_blank" class="cta-btn">
+  <a href="https://t.me/targetinv_bot" target="_blank" class="cta-btn"
+   onclick="gtag('event','telegram_click',{
+       event_category:'CTA',
+       event_label:'Middle Join Button'
+   });">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24" alt="Telegram">
     Join for free now
   </a>
 </section>
 
 <!-- Fixed Bottom Button -->
-<a href="https://t.me/tgimarketpros" target="_blank" class="fixed-btn">
+<a href="https://t.me/tgimarketpros" target="_blank" class="fixed-btn"
+   onclick="gtag('event','telegram_click',{
+       event_category:'CTA',
+       event_label:'Fixed Bottom Join'
+   });">
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24" alt="Telegram">
   Join for free now
 </a>
